@@ -34,7 +34,7 @@ JSON Web Token: Para creación de tokens de acceso que permiten la propagación 
 Encriptacion de contraseña: Para ocultar datos sensibles.
 
 DER:
-![Diagrama de entidad-relación](DER.png)
+![Diagrama de entidad-relación](DER.PNG)
 
 Contribución
 Este proyecto fue desarrollado de manera individual y no está abierto a contribuciones externas en este momento. Sin embargo, si encuentras algún error o bug, por favor contáctame para que pueda solucionarlo.
