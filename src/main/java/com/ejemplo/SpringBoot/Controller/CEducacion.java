@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CEducacion {
     @Autowired
     Seducacion sEducacion;
-    
+   
     @GetMapping("/lista")
     public ResponseEntity<List<Educacion>> list(){
         List<Educacion> list = sEducacion.list();
