@@ -9,21 +9,22 @@ import javax.validation.constraints.Size;
 
 @Entity
 public class Persona {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
+
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String nombre;
-    
+
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String apellido;
-    
+
     @NotNull
     private String descripcion;
-    
+
     private String img;
 
     public Persona() {
@@ -76,9 +77,4 @@ public class Persona {
         this.img = img;
     }
 
-    
-    
-    
-    
-    
 }

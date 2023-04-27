@@ -6,20 +6,21 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class dtoHys {
+public class dtoProyecto {
+
     @NotBlank
     private String nombre;
     @NotBlank
-    private int porcentaje;
-    @NotBlank
     private String color;
+    @NotBlank
+    private String url;
 
-    public dtoHys() {
+    public dtoProyecto() {
     }
 
-    public dtoHys(String nombre, int porcentaje, String color) {
+    public dtoProyecto(String nombre, String color, String url) {
         this.nombre = nombre;
-        this.porcentaje = porcentaje;
         this.color = color;
+        this.url = url;
     }
 }

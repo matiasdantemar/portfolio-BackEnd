@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/educacion")
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = "http://localhost:4200")
 public class CEducacion {
     @Autowired
     Seducacion sEducacion;
@@ -52,15 +52,15 @@ public class CEducacion {
     
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoEducacion dtoeducacion){
-        if(StringUtils.isBlank(dtoeducacion.getNombreE())){
+        if(StringUtils.isBlank(dtoeducacion.getNombre())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        if(sEducacion.existsByNombreE(dtoeducacion.getNombreE())){
+        if(sEducacion.existsByNombre(dtoeducacion.getNombre())){
             return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
         
         Educacion educacion = new Educacion(
-                dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
+                dtoeducacion.getNombre(), dtoeducacion.getDescripcion(), dtoeducacion.getInicio(), dtoeducacion.getFin(), dtoeducacion.getImg()
             );
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
@@ -72,17 +72,21 @@ public class CEducacion {
         if(!sEducacion.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         }
-        if(sEducacion.existsByNombreE(dtoeducacion.getNombreE()) && sEducacion.getByNmbreE(dtoeducacion.getNombreE()).get().getId() != id){
+        if(sEducacion.existsByNombre(dtoeducacion.getNombre()) && sEducacion.getByNombre(dtoeducacion.getNombre()).get().getId() != id){
             return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
-        if(StringUtils.isBlank(dtoeducacion.getNombreE())){
+        if(StringUtils.isBlank(dtoeducacion.getNombre())){
             return new ResponseEntity(new Mensaje("El campo no puede estar vacio"), HttpStatus.BAD_REQUEST);
         }
         
         Educacion educacion = sEducacion.getOne(id).get();
         
-        educacion.setNombreE(dtoeducacion.getNombreE());
-        educacion.setDescripcionE(dtoeducacion.getDescripcionE());
+        educacion.setNombre(dtoeducacion.getNombre());
+        educacion.setDescripcion(dtoeducacion.getDescripcion());
+        educacion.setInicio(dtoeducacion.getInicio());
+        educacion.setFin(dtoeducacion.getFin());
+        educacion.setImg(dtoeducacion.getImg());
+        
         
         sEducacion.save(educacion);
         

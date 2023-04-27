@@ -1,38 +1,35 @@
 package com.ejemplo.SpringBoot.Dto;
 
 import javax.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class dtoExperiencia {
-    @NotBlank
-    private String nombreE;
-    @NotBlank
-    private String descripcionE;
-    
-    //Constructores
 
+    @NotBlank
+    private String nombre;
+    @NotBlank
+    private String descripcion;
+    @NotBlank
+    private String tipo;
+    @NotBlank
+    private String inicio;
+    @NotBlank
+    private String fin;
+    @NotBlank
+    private String img;
+
+    //Constructores
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE) {
-        this.nombreE = nombreE;
-        this.descripcionE = descripcionE;
+    public dtoExperiencia(String nombre, String descripcion, String tipo, String inicio, String fin) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.tipo = tipo;
+        this.inicio = inicio;
+        this.fin = fin;
     }
-    //Getters & Setters
-
-    public String getNombreE() {
-        return nombreE;
-    }
-
-    public void setNombreE(String nombreE) {
-        this.nombreE = nombreE;
-    }
-
-    public String getDescripcionE() {
-        return descripcionE;
-    }
-
-    public void setDescripcionE(String descripcionE) {
-        this.descripcionE = descripcionE;
-    }
-    
 }
