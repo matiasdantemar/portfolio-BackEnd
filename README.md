@@ -18,15 +18,15 @@ Spring Boot: Para crear aplicaciones web de manera rápida y sencilla.
 ##### Dependencias:
 Spring Web: Para crear aplicaciones web basadas en Spring MVC, el controlador maneja las solicitudes y las respuestas, el modelo maneja la lógica de negocios y la vista maneja la presentación de datos al usuario final.
 
-##### JPA: Para trabajar con bases de datos relacionales de manera más fácil y eficiente, creación automática de tablas en la base de datos, mapeo objeto-relacional, consultas JPQL.
+JPA: Para trabajar con bases de datos relacionales de manera más fácil y eficiente, creación automática de tablas en la base de datos, mapeo objeto-relacional, consultas JPQL.
 
-##### mysql driver: Para la conectividad y manipulación de datos en una aplicación Java que utiliza MySQL como su sistema de gestión de bases de datos.
+mysql driver: Para la conectividad y manipulación de datos en una aplicación Java que utiliza MySQL como su sistema de gestión de bases de datos.
 
-##### Validation: Para validar los datos de entrada en la aplicación, se pueden agregar anotaciones de validación a las clases de modelo de datos y Spring Boot automáticamente valida los datos de entrada y devuelve errores de validación en caso de que los datos no cumplan con los criterios de validación especificados.
+Validation: Para validar los datos de entrada en la aplicación, se pueden agregar anotaciones de validación a las clases de modelo de datos y Spring Boot automáticamente valida los datos de entrada y devuelve errores de validación en caso de que los datos no cumplan con los criterios de validación especificados.
 
-##### spring boot devtools: Para Reinicio automático de la aplicación, Recarga en vivo (LiveReload).
+spring boot devtools: Para Reinicio automático de la aplicación, Recarga en vivo (LiveReload).
 
-##### Lombok: Para simplifica el desarrollo de software al generar automáticamente código de boilerplate común, como getters, setters, constructores, equals, hashCode y toString, a través de anotaciones.
+Lombok: Para simplifica el desarrollo de software al generar automáticamente código de boilerplate común, como getters, setters, constructores, equals, hashCode y toString, a través de anotaciones.
 
 #### Seguridad:
 JSON Web Token: Para creación de tokens de acceso que permiten la propagación de identidad.
