@@ -87,7 +87,6 @@ public class CEducacion {
         educacion.setFin(dtoeducacion.getFin());
         educacion.setImg(dtoeducacion.getImg());
         
-        
         sEducacion.save(educacion);
         
         return new ResponseEntity(new Mensaje("Educacion actualizada"), HttpStatus.OK);
